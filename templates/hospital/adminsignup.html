@@ -8,7 +8,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>LazyCoder || sumit</title>
+    <title>Grafia Medicals</title>
     <style type="text/css">
       body {
         color: #aa082e;
@@ -61,47 +61,68 @@
     <!--- signup page for admin by admin(sumit)  ---------->
     <form method="post">
       {% csrf_token %}
+
       <div class="container register-form">
         <div class="form">
           <div class="note">
-            <p>Add New Admin To Hospital</p>
+            <p>Add an Admin</p>
           </div>
 
           <div class="form-content">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  {% render_field form.first_name class="form-control"
-                  placeholder="First Name" %}
+                  <input
+                    name="first_name"
+                    placeholder="First Name"
+                    class="form-control"
+                    type="text"
+                  />
                 </div>
                 <div class="form-group">
-                  {% render_field form.username class="form-control"
-                  placeholder="Username" %}
+                  <input
+                    name="username"
+                    placeholder="Username"
+                    class="form-control"
+                    type="text"
+                  />
                 </div>
+                
+                
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  {% render_field form.last_name class="form-control"
-                  placeholder="Last Name" %}
+                  <input
+                    name="last_name"
+                    placeholder="Last Name"
+                    class="form-control"
+                    type="text"
+                  />
                 </div>
                 <div class="form-group">
-                  {% render_field form.password class="form-control"
-                  placeholder="Password" %}
+                  <input
+                    name="password"
+                    type="text"
+                    placeholder="Password"
+                    class="form-control"
+                  />
                 </div>
+                
+                
+                
               </div>
             </div>
-            <button type="submit" class="btnSubmit">Submit</button>
+            <button type="submit" class="btnSubmit">Register</button>
             <div class="text-center">
-              Already have an account? <a href="adminlogin">Login here</a>
+              Already have an account? <a href="doctorlogin">Login here</a>
             </div>
-          </div>
+
+          
         </div>
       </div>
     </form>
     <!--
-  developed By : sumit kumar
-  facebook : fb.com/sumit.luv
-  youtube : youtube.com/lazycoders
+  
   -->
 
     {% include "hospital/footer.html" %}
